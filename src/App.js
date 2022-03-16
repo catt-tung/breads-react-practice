@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import BreadList from './BreadList.jsx'
 
 function App() {
+  const breads = [
+    {name: "cornbread",
+    difficulty: "easy",
+    ingredients: ["flour", "egg", "cornmeal", "sugar", "baking powder", "butter", "milk"]
+    },
+    
+    {name: "sourdough",
+    difficulty: "hard",
+    ingredients: ["starter", "flour", "water", "salt"]
+    },
+    
+    {name: "traditional white",
+    difficulty: "intermediate",
+    ingredients: ["flour", "water", "yeast", "honey", "salt", "butter" ]
+    },
+    ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Bread List</h1>
+      <BreadList breads={breads}/>
     </div>
   );
 }
